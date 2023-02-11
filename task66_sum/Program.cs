@@ -5,8 +5,8 @@
 int RecSum(int m, int n)
 {
     if (n == m) return m;
-    if (n < m) return 0;
-    return n + RecSum(m, n - 1);
+    if (n < m) return m + RecSum(m - 1, n);
+    else return n + RecSum(m, n - 1);
 }
 
 int GetNum(string text)
